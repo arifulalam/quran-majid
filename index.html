@@ -15,6 +15,33 @@
   <link rel="icon" type="image/ico" href="favicon.ico">
 
   <title>Qur'an Mazid</title>
+
+  <style type="text/css">
+    .nav>li>a, .nav>li>a:focus, .nav>li>a:hover,
+    .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+      background-color: transparent;
+      padding: 0px;
+    }
+    .dropdown-menu{
+      left: -38px !important;
+      background: #C7D5D4;
+      border-radius: 0;
+      min-width: 170px;
+    }
+    .right-menu-btn{
+      position: absolute;
+      border: none;
+      background: none;
+      right: 0;
+      top: 70px;
+      height: 53px;
+      width: 53px;
+    }
+
+    #settings .panel-body{
+      background: #E9EEEE !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -25,23 +52,35 @@
   <div class="search">
     <input type="text" class="search-input">
   </div>
-  <button class="user-btn">
+  <!-- <button class="user-btn">
     <span class="user-name">Saiful Islam</span>
     <i class="fa fa-user" aria-hidden="true"></i>
     <i class="fa fa-caret-down" aria-hidden="true"></i>
-  </button>
+  </button> -->
+  <ul class="user-btn nav nav-pills">
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        Ariful Alam <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </li>
+  </ul>
   <button class="help-btn">
     <i class="fa fa-question-circle" aria-hidden="true"></i>
   </button>
   <h1 class="surah-name">Suratul Fatihah <span class="arabic">سورة الفاتحة</span></h1>
   <button class="left-menu-btn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+  <button class="right-menu-btn"><i class="fa fa-2x fa-bars" aria-hidden="true"></i></button>
 </header>
 
 <nav>
   <div class="nav-wrapper">
     <div class="nav-btns">
-      <button class="btn-nav active nav-btn" data-tab=".nav-surah-list">Surah List</button>
-      <button class="btn-nav nav-btn" data-tab=".nav-navigation">Navigation</button>
+      <button class="btn-nav nav-btn" data-tab=".nav-surah-list">Surah List</button>
+      <button class="btn-nav active nav-btn" data-tab=".nav-navigation">Navigation</button>
     </div>
     <div class="nav-surah-list sidebar" data-simplebar>
       <ul class="surah-list-ul sidebar-ul">
@@ -1021,6 +1060,7 @@
       </div>
     </div>
   </div>
+  <div class="shade" style="z-index: -99"></div>
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
